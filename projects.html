@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Projects — Bilal Adam</title>
+	<meta name="description" content="Selected projects by Bilal Adam, including the iOS obstacle-avoidance capstone app and a live weather web component.">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap">
+
+	<link rel="stylesheet" href="./styles/main.css">
+	<script type="module" src="./scripts/main.js" defer></script>
+	<script type="module" src="./scripts/weather-card.js" defer></script>
+</head>
+<body>
+	<a class="skip-link" href="#main">Skip to content</a>
+
+	<header class="site-header">
+		<div class="site-header__inner">
+			<a class="site-logo" href="./index.html">Bilal Adam</a>
+			<nav class="site-nav" aria-label="Primary">
+				<ul>
+					<li><a href="./index.html">About</a></li>
+					<li><a href="./resume.html">Résumé</a></li>
+					<li><a href="./projects.html">Projects</a></li>
+					<li><a href="./contact.html">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<main id="main" class="container">
+		<header>
+			<p class="hero__eyebrow">Projects</p>
+			<h1>Things I've built.</h1>
+			<p class="hero__lede">
+				A live demo built with a custom element, plus a few projects from school and
+				externships. The full code for the demo lives in the
+				<a href="https://github.com/BilalAdam13" rel="noopener">site's GitHub repo</a>.
+			</p>
+		</header>
+
+		<section class="section" aria-labelledby="demo">
+			<header class="section-head">
+				<h2 id="demo">Live demo: Weather card web component</h2>
+				<span class="section-head__index">01</span>
+			</header>
+
+			<p>
+				A small vanilla-JavaScript custom element (<code>&lt;weather-card&gt;</code>)
+				that fetches current conditions for San Diego from the
+				<a href="https://open-meteo.com/" rel="noopener">Open-Meteo API</a>, parses
+				the JSON, and renders it with proper loading and error states. No framework,
+				no API key, no build step — just standards.
+			</p>
+
+			<noscript>
+				<p class="no-js-notice">
+					This demo requires JavaScript to fetch live weather. Everything else on
+					this site works without it.
+				</p>
+			</noscript>
+
+			<div class="widget-host">
+				<weather-card city="San Diego" lat="32.7157" lon="-117.1611"></weather-card>
+			</div>
+
+			<p class="text-muted" style="font-size: 0.9rem;">
+				API: <a href="https://open-meteo.com/" rel="noopener">Open-Meteo</a> (free,
+				no key). The component handles the fetch, parses the JSON, maps WMO weather
+				codes to human descriptions, and degrades gracefully on network errors.
+			</p>
+		</section>
+
+		<section class="section" aria-labelledby="capstone">
+			<header class="section-head">
+				<h2 id="capstone">Senior capstone &amp; class projects</h2>
+				<span class="section-head__index">02</span>
+			</header>
+
+			<div class="projects">
+
+				<article class="project-card">
+					<header class="project-card__head">
+						<h3>Obstacle Avoidance iOS App</h3>
+						<ul class="project-card__tags" aria-label="Tech stack">
+							<li>Swift</li>
+							<li>CoreML</li>
+							<li>ARKit</li>
+							<li>Roboflow</li>
+							<li>Python</li>
+						</ul>
+					</header>
+					<p>
+						Senior design capstone. An iPhone app for people who are blind or have
+						low vision that detects obstacles in real time and provides audio and
+						haptic guidance — aiming to supplement or replace a white cane for
+						outdoor navigation. Built with a custom Roboflow-trained vision model
+						deployed via CoreML, with ARKit handling spatial awareness.
+					</p>
+					<div class="project-card__links">
+						<a href="https://github.com/usdcon7105/obstacle_avoidance_26" rel="noopener">
+							View on GitHub →
+						</a>
+					</div>
+				</article>
+
+				<article class="project-card">
+					<header class="project-card__head">
+						<h3>Automated Toxic Comment Detector</h3>
+						<ul class="project-card__tags" aria-label="Tech stack">
+							<li>Python</li>
+							<li>BERT</li>
+							<li>BiLSTM</li>
+							<li>NLP</li>
+						</ul>
+					</header>
+					<p>
+						Multi-label classifier for six toxicity categories trained on the
+						Jigsaw dataset. Compared classical (TF-IDF + LogReg, SVM), deep
+						(CNN, BiLSTM with attention), and transformer (BERT) approaches,
+						evaluated with ROC-AUC to handle severe class imbalance. Improved
+						rare-class performance through attention, class-balanced training,
+						and hyperparameter tuning.
+					</p>
+				</article>
+
+				<article class="project-card">
+					<header class="project-card__head">
+						<h3>Spotify Hit Song Predictor</h3>
+						<ul class="project-card__tags" aria-label="Tech stack">
+							<li>Python</li>
+							<li>Pandas</li>
+							<li>Scikit-learn</li>
+						</ul>
+					</header>
+					<p>
+						Supervised ML pipeline (Logistic Regression, Random Forest) predicting
+						song popularity from Spotify audio features. Built feature selection
+						and engineering around correlation analysis and EDA, then translated
+						classification metrics into actionable music-analytics insights.
+					</p>
+				</article>
+
+				<article class="project-card">
+					<header class="project-card__head">
+						<h3>Actor Connection Graph</h3>
+						<ul class="project-card__tags" aria-label="Tech stack">
+							<li>Java</li>
+							<li>Graph Theory</li>
+							<li>BFS</li>
+							<li>Dijkstra's</li>
+						</ul>
+					</header>
+					<p>
+						BFS and Dijkstra's algorithm implementations that find shortest paths
+						between actors through shared movies, over a 100,000+ entry IMDb
+						dataset. Built custom node and edge structures, a priority-queue
+						pathfinder, and robust TSV file I/O with edge-case handling.
+					</p>
+				</article>
+
+			</div>
+		</section>
+	</main>
+
+	<footer class="site-footer">
+		<div class="site-footer__inner">
+			<p>© 2026 Bilal Adam · Built by hand with HTML, CSS, and vanilla JS.</p>
+			<p>
+				<a href="https://github.com/BilalAdam13" rel="noopener">GitHub</a> ·
+				<a href="https://www.linkedin.com/in/bilal-adam1/" rel="noopener">LinkedIn</a> ·
+				<a href="mailto:badam@sandiego.edu">Email</a>
+			</p>
+		</div>
+	</footer>
+</body>
+</html>
