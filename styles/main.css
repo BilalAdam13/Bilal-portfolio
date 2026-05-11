@@ -657,3 +657,41 @@ main {
 
 .text-muted { color: var(--ink-muted); }
 .mono       { font-family: var(--font-mono); }
+
+/* =========================================================
+   Theme override — used by <theme-toggle> custom element.
+   When user explicitly picks a theme, <html data-theme="light">
+   or <html data-theme="dark"> is set, and these rules override
+   the @media (prefers-color-scheme) defaults.
+   ========================================================= */
+html[data-theme="light"] {
+	--bg:           #f4f4f5;
+	--bg-elevated:  #ffffff;
+	--bg-sunken:    #e4e4e7;
+	--ink:          #18181b;
+	--ink-soft:     #3f3f46;
+	--ink-muted:    #71717a;
+	--rule:         #d4d4d8;
+	--accent:       #00803b;
+	--accent-soft:  #d1fadf;
+	--accent-ink:   #ffffff;
+	--focus:        #00803b;
+	--shadow-1:     0 1px 2px rgb(0 0 0 / 0.05);
+	--shadow-2:     0 8px 24px rgb(0 0 0 / 0.08);
+}
+
+html[data-theme="dark"] {
+	--bg:           #0e0e10;
+	--bg-elevated:  #18181b;
+	--bg-sunken:    #08080a;
+	--ink:          #e8e8ea;
+	--ink-soft:     #b4b4b8;
+	--ink-muted:    #7a7a82;
+	--rule:         #2a2a30;
+	--accent:       #39ff8a;
+	--accent-soft:  #14331f;
+	--accent-ink:   #0e0e10;
+	--focus:        #39ff8a;
+	--shadow-1:     0 1px 2px rgb(0 0 0 / 0.4);
+	--shadow-2:     0 8px 24px rgb(0 0 0 / 0.5);
+}
