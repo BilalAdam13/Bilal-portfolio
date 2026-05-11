@@ -4,7 +4,7 @@ A small personal portfolio site built for COMP 494 at the University of San Dieg
 It serves as a public-facing introduction (about, résumé, projects, contact) and
 demonstrates a working web application component built with vanilla JavaScript.
 
-**Live site:** _(add your Cloudflare Pages or GitHub Pages URL here once deployed)_
+**Live site:** _https://bilal-portfolio.beezee1113.workers.dev/_
 
 ---
 
