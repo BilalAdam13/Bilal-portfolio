@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Résumé — Bilal Adam</title>
+	<meta name="description" content="Résumé of Bilal Adam — Computer Science senior at USD, AI and Data Science concentration. Externships at Wayfair and Outamation.">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap">
+
+	<link rel="stylesheet" href="./styles/main.css">
+	<script type="module" src="./scripts/main.js" defer></script>
+</head>
+<body>
+	<a class="skip-link" href="#main">Skip to content</a>
+
+	<header class="site-header">
+		<div class="site-header__inner">
+			<a class="site-logo" href="./index.html">Bilal Adam</a>
+			<nav class="site-nav" aria-label="Primary">
+				<ul>
+					<li><a href="./index.html">About</a></li>
+					<li><a href="./resume.html">Résumé</a></li>
+					<li><a href="./projects.html">Projects</a></li>
+					<li><a href="./contact.html">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<main id="main" class="container">
+		<article>
+			<header>
+				<p class="hero__eyebrow">Résumé</p>
+				<h1>Bilal Adam</h1>
+				<p class="hero__lede">
+					Computer Science senior at the University of San Diego concentrating in
+					Data Science and AI. Looking for full-time roles starting summer 2026.
+				</p>
+			</header>
+
+			<dl class="resume-meta">
+				<div>
+					<dt class="visually-hidden">Email</dt>
+					<dd><a href="mailto:badam@sandiego.edu">badam@sandiego.edu</a></dd>
+				</div>
+				<div>
+					<dt class="visually-hidden">Phone</dt>
+					<dd>(949) 529-4614</dd>
+				</div>
+				<div>
+					<dt class="visually-hidden">LinkedIn</dt>
+					<dd><a href="https://www.linkedin.com/in/bilal-adam1/" rel="noopener">linkedin.com/in/bilal-adam1</a></dd>
+				</div>
+				<div>
+					<dt class="visually-hidden">GitHub</dt>
+					<dd><a href="https://github.com/BilalAdam13" rel="noopener">github.com/BilalAdam13</a></dd>
+				</div>
+			</dl>
+
+			<section class="resume-section" aria-labelledby="edu">
+				<h2 id="edu">Education</h2>
+
+				<div class="resume-entry">
+					<p class="resume-entry__period">Aug 2023 – May 2026</p>
+					<div>
+						<p class="resume-entry__role">University of San Diego</p>
+						<p class="resume-entry__org">
+							B.S. in Computer Science, Data Science and AI Concentration · GPA 3.30
+						</p>
+					</div>
+				</div>
+
+				<div class="resume-entry">
+					<p class="resume-entry__period">Jun 2021 – May 2023</p>
+					<div>
+						<p class="resume-entry__role">Irvine Valley College</p>
+						<p class="resume-entry__org">Associate in Science in Computer Science</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="resume-section" aria-labelledby="exp">
+				<h2 id="exp">Experience</h2>
+
+				<div class="resume-entry">
+					<p class="resume-entry__period">Oct 2025 – Jan 2026</p>
+					<div>
+						<p class="resume-entry__role">AI Extern — Wayfair (Remote)</p>
+						<p class="resume-entry__org">n8n · Python · LLMs · APIs</p>
+						<ul>
+							<li>Built AI agents in n8n to automate market-trend detection, competitor tracking, and marketing content generation.</li>
+							<li>Conducted trend analysis across the home-goods sector using web scraping, APIs, and RSS feeds to identify consumer demand and pricing patterns.</li>
+							<li>Consolidated agent outputs into a live Google Sheets dashboard, delivering AI-generated insights to support data-driven category decisions.</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="resume-entry">
+					<p class="resume-entry__period">May 2025 – Jul 2025</p>
+					<div>
+						<p class="resume-entry__role">AI &amp; Automation Extern — Outamation (Remote)</p>
+						<p class="resume-entry__org">Python · PyMuPDF · LlamaIndex</p>
+						<ul>
+							<li>Built AI-powered workflows to automate document classification and data extraction using NLP, computer vision, and Python-based pipelines (PyMuPDF, OCR).</li>
+							<li>Developed a retrieval system with LlamaIndex and Retrieval-Augmented Generation to improve information search accuracy across mortgage documents, while evaluating open-source AI models.</li>
+							<li>Compiled a comprehensive analysis on AI models for document processing, highlighting challenges, optimization strategies, and deployment recommendations.</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+
+			<section class="resume-section" aria-labelledby="proj">
+				<h2 id="proj">Selected Projects</h2>
+
+				<div class="resume-entry">
+					<p class="resume-entry__period">2025</p>
+					<div>
+						<p class="resume-entry__role">Automated Toxic Comment Detector</p>
+						<p class="resume-entry__org">Python · NLP · Machine Learning</p>
+						<ul>
+							<li>Multi-label classification on the Jigsaw dataset across six toxicity categories.</li>
+							<li>Compared classical (TF-IDF + LogReg, SVM), deep (CNN, BiLSTM with attention), and transformer (BERT) models using ROC-AUC for class imbalance.</li>
+							<li>Tuned via feature engineering, attention, class-balanced training, and hyperparameter search; analyzed accuracy, interpretability, and compute trade-offs.</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="resume-entry">
+					<p class="resume-entry__period">2024</p>
+					<div>
+						<p class="resume-entry__role">Spotify Hit Song Predictor</p>
+						<p class="resume-entry__org">Python · Pandas · Scikit-learn</p>
+						<ul>
+							<li>Supervised models (Logistic Regression, Random Forest) predicting song popularity from Spotify audio features.</li>
+							<li>Feature engineering via correlation, distribution, and EDA for model interpretability.</li>
+							<li>Evaluated with train/test splits and classification metrics, translating results into music-analytics insights.</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="resume-entry">
+					<p class="resume-entry__period">2024</p>
+					<div>
+						<p class="resume-entry__role">Actor Connection Graph Algorithm</p>
+						<p class="resume-entry__org">Java · Graph Theory</p>
+						<ul>
+							<li>Implemented BFS and Dijkstra's algorithm to find shortest paths between actors via shared films on a 100k+ entry IMDb dataset.</li>
+							<li>Engineered custom node/edge structures with priority queues for optimized pathfinding.</li>
+							<li>Built robust TSV file I/O with comprehensive error handling and edge-case management.</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+
+			<section class="resume-section" aria-labelledby="skills">
+				<h2 id="skills">Technical Skills</h2>
+
+				<ul class="skill-list">
+					<li>
+						<span class="skill-list__label">Languages</span>
+						<span>Python, Java, SQL, R, JavaScript, HTML/CSS, C/C++, Swift, Excel</span>
+					</li>
+					<li>
+						<span class="skill-list__label">ML &amp; AI</span>
+						<span>Machine Learning, LLMs, NLP, BERT, BiLSTM, RAG, LlamaIndex, Computer Vision</span>
+					</li>
+					<li>
+						<span class="skill-list__label">Data</span>
+						<span>Pandas, NumPy, Scikit-learn, Tableau, Power BI, Jupyter</span>
+					</li>
+					<li>
+						<span class="skill-list__label">Tools</span>
+						<span>Git, n8n, API integration, automation, PyMuPDF, CoreML, ARKit, Roboflow</span>
+					</li>
+				</ul>
+			</section>
+
+			<div class="resume-actions">
+				<a class="btn btn--primary" href="./contact.html">Get in touch</a>
+				<a class="btn btn--ghost" href="./projects.html">See projects</a>
+			</div>
+		</article>
+	</main>
+
+	<footer class="site-footer">
+		<div class="site-footer__inner">
+			<p>© 2026 Bilal Adam · Built by hand with HTML, CSS, and vanilla JS.</p>
+			<p>
+				<a href="https://github.com/BilalAdam13" rel="noopener">GitHub</a> ·
+				<a href="https://www.linkedin.com/in/bilal-adam1/" rel="noopener">LinkedIn</a> ·
+				<a href="mailto:badam@sandiego.edu">Email</a>
+			</p>
+		</div>
+	</footer>
+</body>
+</html>
