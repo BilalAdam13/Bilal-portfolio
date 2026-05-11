@@ -1,17 +1,17 @@
 # Bilal Adam — Portfolio
 
 A small personal portfolio site built for COMP 494 at the University of San Diego.
-It serves as a public-facing introduction (about, résumé, projects, contact) and
+It serves as a public facing introduction (about, résumé, projects, contact) and
 demonstrates a working web application component built with vanilla JavaScript.
 
-**Live site:** _https://bilal-portfolio.beezee1113.workers.dev/_
+**Live site:** _https://bilal-portfolio.beezee1113.workers.dev_
 
 ---
 
 ## Stack
 
 - **HTML5** — hand-authored, semantic markup (`<main>`, `<article>`, `<section>`, `<nav>`, `<header>`, `<footer>`)
-- **CSS** — hand-authored, no framework. Uses custom properties for theming, CSS Grid and Flexbox for layout, `clamp()` and relative units (`rem`, `ch`, `vw`) for fluid sizing, and `prefers-color-scheme` for automatic dark mode.
+- **CSS** — hand authored, no framework. Uses custom properties for theming, CSS Grid and Flexbox for layout, `clamp()` and relative units (`rem`, `ch`, `vw`) for fluid sizing, and `prefers-color-scheme` for automatic dark mode.
 - **JavaScript** — vanilla ES modules. No framework, no bundler, no build step. JavaScript is layered on as a progressive enhancement — the site is fully usable without it.
 - **Web component** — the API demo is a custom element (`<weather-card>`) using Light DOM.
 
@@ -43,6 +43,26 @@ JavaScript. It:
 The API was chosen because it requires no key, is free for non-commercial use,
 and returns clean JSON.
 
+## Additional web components (extra credit)
+
+The site uses a coordinated set of custom elements across multiple pages, all
+sharing design tokens:
+
+- **`<weather-card>`** — the primary API demo described above (Projects page).
+- **`<github-stats>`** — a second API widget on the Projects page that fetches
+  live profile stats (public repos, followers, following, account age) from the
+  [GitHub REST API](https://docs.github.com/en/rest/users/users).
+  Same architecture as the weather card: real fetch, JSON parsing, loading and
+  error states, defensive shape checking.
+- **`<theme-toggle>`** — a button in the site header on every page that flips
+  between dark and light themes. Persists the user's choice in `localStorage`
+  and falls back to `prefers-color-scheme` when no choice is saved. Without
+  JavaScript the toggle isn't visible and the OS preference continues to drive
+  the theme via the existing `@media` rule.
+- **`<copy-button>`** — on the contact page, wraps the email address so visitors
+  can copy it to the clipboard with one click. Without JavaScript, the
+  underlying `mailto:` link remains visible and functional.
+
 ## Running locally
 
 This is a static site with no build step. Open `index.html` in a browser, or
@@ -62,7 +82,8 @@ npx serve .
 
 ## Deploying
 
-The site is deployed via **Cloudflare** (Workers/Pages). To deploy your own copy:
+The site is deployed to **Cloudflare Pages**. To deploy your own copy:
+
 1. Push this repo to GitHub
 2. Sign in at [pages.cloudflare.com](https://pages.cloudflare.com)
 3. "Create a project" → connect the GitHub repo
@@ -95,13 +116,16 @@ smoother UX.
 .
 ├── index.html          # Home / About
 ├── resume.html         # Résumé page
-├── projects.html       # Projects + weather demo
+├── projects.html       # Projects + weather demo + github-stats demo
 ├── contact.html        # Contact form
 ├── styles/
 │   └── main.css        # All styles
 ├── scripts/
 │   ├── main.js         # Progressive enhancements (nav, form)
-│   └── weather-card.js # <weather-card> custom element
+│   ├── weather-card.js # <weather-card> custom element
+│   ├── github-stats.js # <github-stats> custom element
+│   ├── theme-toggle.js # <theme-toggle> custom element
+│   └── copy-button.js  # <copy-button> custom element
 └── README.md
 ```
 

@@ -12,6 +12,8 @@
 
 	<link rel="stylesheet" href="./styles/main.css">
 	<script type="module" src="./scripts/main.js" defer></script>
+	<script type="module" src="./scripts/theme-toggle.js" defer></script>
+	<script type="module" src="./scripts/copy-button.js" defer></script>
 </head>
 <body>
 	<a class="skip-link" href="#main">Skip to content</a>
@@ -27,6 +29,7 @@
 					<li><a href="./contact.html">Contact</a></li>
 				</ul>
 			</nav>
+			<theme-toggle></theme-toggle>
 		</div>
 	</header>
 
@@ -104,7 +107,10 @@
 
 			<div class="contact-extras">
 				<p>
-					Prefer email? <a href="mailto:badam@sandiego.edu">badam@sandiego.edu</a>
+					Prefer email?
+					<copy-button value="badam@sandiego.edu" label="Copy email address to clipboard">
+						<a href="mailto:badam@sandiego.edu">badam@sandiego.edu</a>
+					</copy-button>
 				</p>
 				<p>
 					Also on <a href="https://www.linkedin.com/in/bilal-adam1/" rel="noopener">LinkedIn</a>
