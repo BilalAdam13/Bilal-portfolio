@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Contact — Bilal Adam</title>
+	<meta name="description" content="Get in touch with Bilal Adam — email, LinkedIn, and a working contact form.">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap">
+
+	<link rel="stylesheet" href="./styles/main.css">
+	<script type="module" src="./scripts/main.js" defer></script>
+</head>
+<body>
+	<a class="skip-link" href="#main">Skip to content</a>
+
+	<header class="site-header">
+		<div class="site-header__inner">
+			<a class="site-logo" href="./index.html">Bilal Adam</a>
+			<nav class="site-nav" aria-label="Primary">
+				<ul>
+					<li><a href="./index.html">About</a></li>
+					<li><a href="./resume.html">Résumé</a></li>
+					<li><a href="./projects.html">Projects</a></li>
+					<li><a href="./contact.html">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<main id="main" class="container container--narrow">
+		<section>
+			<p class="hero__eyebrow">Contact</p>
+			<h1>Let's talk.</h1>
+			<p class="hero__lede">
+				The fastest way to reach me is email, but the form below works too —
+				it'll land in my inbox.
+			</p>
+
+			<!--
+				The form posts to Formspree.
+				If JavaScript is disabled, the browser performs a normal POST and the user is
+				redirected to Formspree's success page. If JavaScript is enabled, main.js
+				intercepts and submits via fetch() for a smoother experience.
+
+				REPLACE YOUR_FORMSPREE_ID below with the ID from your Formspree dashboard.
+			-->
+			<form
+				class="contact-form"
+				data-contact-form
+				action="https://formspree.io/f/xjgljkop"
+				method="POST"
+				novalidate>
+
+				<div class="field">
+					<label for="name">Name</label>
+					<input
+						type="text"
+						id="name"
+						name="name"
+						required
+						minlength="2"
+						maxlength="80"
+						autocomplete="name"
+						placeholder="Your name">
+				</div>
+
+				<div class="field">
+					<label for="email">Email</label>
+					<input
+						type="email"
+						id="email"
+						name="email"
+						required
+						autocomplete="email"
+						placeholder="you@example.com">
+					<small class="field__hint">I'll only use this to reply to you.</small>
+				</div>
+
+				<div class="field">
+					<label for="message">Message</label>
+					<textarea
+						id="message"
+						name="message"
+						required
+						minlength="10"
+						maxlength="2000"
+						placeholder="What's up?"></textarea>
+				</div>
+
+				<!-- Honeypot for spam bots — humans never see this -->
+				<div class="visually-hidden" aria-hidden="true">
+					<label for="website">Leave this empty</label>
+					<input type="text" id="website" name="_gotcha" tabindex="-1" autocomplete="off">
+				</div>
+
+				<div class="form-actions">
+					<button type="submit" class="btn btn--primary">Send message</button>
+					<p class="form-status" data-form-status role="status" aria-live="polite"></p>
+				</div>
+			</form>
+
+			<div class="contact-extras">
+				<p>
+					Prefer email? <a href="mailto:badam@sandiego.edu">badam@sandiego.edu</a>
+				</p>
+				<p>
+					Also on <a href="https://www.linkedin.com/in/bilal-adam1/" rel="noopener">LinkedIn</a>
+					and <a href="https://github.com/BilalAdam13" rel="noopener">GitHub</a>.
+				</p>
+			</div>
+		</section>
+	</main>
+
+	<footer class="site-footer">
+		<div class="site-footer__inner">
+			<p>© 2026 Bilal Adam · Built by hand with HTML, CSS, and vanilla JS.</p>
+			<p>
+				<a href="https://github.com/BilalAdam13" rel="noopener">GitHub</a> ·
+				<a href="https://www.linkedin.com/in/bilal-adam1/" rel="noopener">LinkedIn</a> ·
+				<a href="mailto:badam@sandiego.edu">Email</a>
+			</p>
+		</div>
+	</footer>
+</body>
+</html>
