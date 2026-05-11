@@ -62,8 +62,7 @@ npx serve .
 
 ## Deploying
 
-The site is deployed to **Cloudflare Pages**. To deploy your own copy:
-
+The site is deployed via **Cloudflare** (Workers/Pages). To deploy your own copy:
 1. Push this repo to GitHub
 2. Sign in at [pages.cloudflare.com](https://pages.cloudflare.com)
 3. "Create a project" → connect the GitHub repo
