@@ -76,3 +76,29 @@ document.documentElement.classList.add("js");
 		statusEl.dataset.state = state;
 	}
 })();
+
+/* =========================================================
+   Open external links in a new tab — progressive enhancement.
+   Without JS, links open in the same tab (still fully functional).
+   With JS, any link pointing to a different host gets target="_blank"
+   plus rel="noopener noreferrer" for security.
+   mailto: and internal links are left alone.
+   ========================================================= */
+(function externalLinksNewTab() {
+	const here = location.hostname;
+	const links = document.querySelectorAll('a[href^="http"]');
+	links.forEach(link => {
+		try {
+			const url = new URL(link.href);
+			if (url.hostname && url.hostname !== here) {
+				link.setAttribute("target", "_blank");
+				const rel = (link.getAttribute("rel") || "").split(/\s+/);
+				if (!rel.includes("noopener"))   rel.push("noopener");
+				if (!rel.includes("noreferrer")) rel.push("noreferrer");
+				link.setAttribute("rel", rel.filter(Boolean).join(" "));
+			}
+		} catch {
+			// invalid URL — ignore
+		}
+	});
+})();
